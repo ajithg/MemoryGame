@@ -1,0 +1,45 @@
+.cards{
+    border: solid;
+    width: 100px;
+    height: 200px;
+    /* background-color: maroon; */
+    cursor: pointer;
+    /* padding: 10px; */
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.rows{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+#container{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+
+.card__face {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+}
+
+.card__face--front {
+background: rgb(2, 0, 36);
+background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 71, 121, 1) 0%, rgba(0, 150, 255, 1) 100%);
+}
+
+.card__face--back {
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+    transform: rotateY(180deg);
+}
+
+.cards.is-flipped {
+    transform: rotateY(180deg);
+}
