@@ -94,9 +94,9 @@ function startStop() {
 
   if (startstop === 1) {
     start();
-    document.getElementById("start").innerHTML = "Stop";
+    // document.getElementById("start").innerHTML = "Stop";
   } else if (startstop === 2) {
-    document.getElementById("start").innerHTML = "Start";
+    // document.getElementById("start").innerHTML = "Start";
     startstop = 0;
     stop();
   }
