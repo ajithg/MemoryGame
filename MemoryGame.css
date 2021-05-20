@@ -1,26 +1,28 @@
-.cards{
+html {
+    background: rgb(34, 193, 195);
+    background: linear-gradient(270deg, rgba(34, 193, 195, 1) 0%, rgba(45, 160, 253, 1) 100%);
+}
+
+.cards {
     border: solid;
     width: 100px;
     height: 200px;
-    /* background-color: maroon; */
     cursor: pointer;
-    /* padding: 10px; */
     transition: transform 1s;
     transform-style: preserve-3d;
     position: relative;
 }
 
-.rows{
+.rows {
     display: flex;
-    padding: 10px;
+    padding: 50px;
     justify-content: space-between;
 }
 
-#container{
+#container {
     margin-left: 20%;
     margin-right: 20%;
 }
-
 
 .card__face {
     position: absolute;
@@ -30,8 +32,8 @@
 }
 
 .card__face--front {
-background: rgb(2, 0, 36);
-background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 71, 121, 1) 0%, rgba(0, 150, 255, 1) 100%);
+    background: rgb(63, 94, 251);
+    background: linear-gradient(0deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
 }
 
 .card__face--back {
