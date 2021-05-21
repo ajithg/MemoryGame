@@ -1,149 +1,164 @@
 <!DOCTYPE html>
-
-<head>
+<html lang="EN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Memory Game for kids" />
+    <meta name="keywords" content="Memory, Game, Kids" />
+    <meta name="author" content="Ajith G" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="MemoryGame.js"></script>
     <link rel="stylesheet" href="MemoryGame.css" />
     <title>Memory Game</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Memory Game</h1>
     <div>
-        <h1>
-            <span id="hour">00</span> :
-            <span id="min">00</span> :
-            <span id="sec">00</span> :
-            <span id="milisec">00</span>
-        </h1>
-        <!-- <button onclick="startStop()" id="start">Start</button> -->
-        <button onclick="reset()">Reset</button>
+      <h1>
+        <span id="hour">00</span> : <span id="min">00</span> :
+        <span id="sec">00</span> :
+        <span id="milisec">00</span>
+      </h1>
+      <!-- <button onclick="startStop()" id="start">Start</button> -->
+      <button onclick="reset()">Reset</button>
     </div>
     <div id="container">
-        <div id="firstRow" class="rows">
-            <div id="card1" class="cards">
-                <div id="burger1" class="card__face card__face--front burger">
-                </div>
-                <div class="card__face card__face--back">
-                    <img src="./img/burger-removebg-preview.png" alt="Avatar" style="width:100%;margin-top: 50%;">
-                </div>
-                <div style="display: none;">
-                    burger
-                </div>
-            </div>
-            <div id="card2" class="cards">
-                <div id="pizza1" class="card__face card__face--front pizza">
-                </div>
-                <div class="card__face card__face--back">
-                    <img src="./img/pizza-removebg-preview.png" alt="Avatar" style="width:100%;margin-top: 50%;">
-                </div>
-                <div style="display: none;">
-                    pizza
-                </div>
-            </div>
-            <div id="card3" class="cards">
-                <div id="donut1" class="card__face card__face--front donut">
-                </div>
-                <div class="card__face card__face--back">
-                    <img src="./img/donut-removebg-preview.png" alt="Avatar" style="width:100%;margin-top: 50%;">
-                </div>
-                <div style="display: none;">
-                    donut
-                </div>
-            </div>
-            <div id="card4" class="cards">
-                <div id="burger2" class="card__face card__face--front burger">
-                </div>
-                <div class="card__face card__face--back">
-                    <img src="./img/burger-removebg-preview.png" alt="Avatar" style="width:100%;margin-top: 50%;">
-                </div>
-                <div style="display: none;">
-                    burger
-                </div>
-            </div>
-            <div id="card5" class="cards">
-                <div id="noodle1" class="card__face card__face--front noodle">
-                </div>
-                <div class="card__face card__face--back">
-                    <img src="./img/noodle-removebg-preview.png" alt="Avatar" style="width:100%;margin-top: 40%;">
-                </div>
-                <div style="display: none;">
-                    noodle
-                </div>
-            </div>
-            <div id="card6" class="cards">
-                <div id="hotdog1" class="card__face card__face--front hotdog">
-                </div>
-                <div class="card__face card__face--back">
-                    <img src="./img/hotdog-removebg-preview.png" alt="Avatar" style="width:100%;margin-top: 70%;">
-                </div>
-                <div style="display: none;">
-                    hotdog
-                </div>
-            </div>
+      <div id="firstRow" class="rows">
+        <div id="card1" class="cards">
+          <div id="burger1" class="card__face card__face--front burger"></div>
+          <div class="card__face card__face--back">
+            <img
+              src="./img/burger-removebg-preview.png"
+              alt="Avatar"
+              style="width: 100%; margin-top: 50%"
+            />
+          </div>
+          <div style="display: none">burger</div>
         </div>
-        <div id="secondRow" class="rows">
-            <div id="card7" class="cards">
-                <div id="hotdog2" class="card__face card__face--front hotdog">
-                </div>
-                <div class="card__face card__face--back">
-                    <img src="./img/hotdog-removebg-preview.png" alt="Avatar" style="width:100%;margin-top: 70%;">
-                </div>
-                <div style="display: none;">
-                    hotdog
-                </div>
-            </div>
-            <div id="card8" class="cards">
-                <div id="taco1" class="card__face card__face--front taco">
-                </div>
-                <div class="card__face card__face--back">
-                    <img src="./img/taco-removebg-preview.png" alt="Avatar" style="width:100%;margin-top: 50%;">
-                </div>
-                <div style="display: none;">
-                    taco
-                </div>
-            </div>
-            <div id="card9" class="cards">
-                <div id="noodle2" class="card__face card__face--front noodle">
-                </div>
-                <div class="card__face card__face--back">
-                    <img src="./img/noodle-removebg-preview.png" alt="Avatar" style="width:100%;margin-top: 40%;">
-                </div>
-                <div style="display: none;">
-                    noodle
-                </div>
-            </div>
-            <div id="card10" class="cards">
-                <div id="taco2" class="card__face card__face--front taco">
-                </div>
-                <div class="card__face card__face--back">
-                    <img src="./img/taco-removebg-preview.png" alt="Avatar" style="width:100%;margin-top: 50%;">
-                </div>
-                <div style="display: none;">
-                    taco
-                </div>
-            </div>
-            <div id="card11" class="cards">
-                <div id="donut2" class="card__face card__face--front donut">
-                </div>
-                <div class="card__face card__face--back">
-                    <img src="./img/donut-removebg-preview.png" alt="Avatar" style="width:100%;margin-top: 50%;">
-                </div>
-                <div style="display: none;">
-                    donut
-                </div>
-            </div>
-            <div id="card12" class="cards">
-                <div id="pizza2" class="card__face card__face--front pizza">
-                </div>
-                <div class="card__face card__face--back">
-                    <img src="./img/pizza-removebg-preview.png" alt="Avatar" style="width:100%;margin-top: 50%;">
-                </div>
-                <div style="display: none;">
-                    pizza
-                </div>
-            </div>
+        <div id="card2" class="cards">
+          <div id="pizza1" class="card__face card__face--front pizza"></div>
+          <div class="card__face card__face--back">
+            <img
+              src="./img/pizza-removebg-preview.png"
+              alt="Avatar"
+              style="width: 100%; margin-top: 50%"
+            />
+          </div>
+          <div style="display: none">pizza</div>
         </div>
+        <div id="card3" class="cards">
+          <div id="donut1" class="card__face card__face--front donut"></div>
+          <div class="card__face card__face--back">
+            <img
+              src="./img/donut-removebg-preview.png"
+              alt="Avatar"
+              style="width: 100%; margin-top: 50%"
+            />
+          </div>
+          <div style="display: none">donut</div>
+        </div>
+        <div id="card4" class="cards">
+          <div id="burger2" class="card__face card__face--front burger"></div>
+          <div class="card__face card__face--back">
+            <img
+              src="./img/burger-removebg-preview.png"
+              alt="Avatar"
+              style="width: 100%; margin-top: 50%"
+            />
+          </div>
+          <div style="display: none">burger</div>
+        </div>
+        <div id="card5" class="cards">
+          <div id="noodle1" class="card__face card__face--front noodle"></div>
+          <div class="card__face card__face--back">
+            <img
+              src="./img/noodle-removebg-preview.png"
+              alt="Avatar"
+              style="width: 100%; margin-top: 40%"
+            />
+          </div>
+          <div style="display: none">noodle</div>
+        </div>
+        <div id="card6" class="cards">
+          <div id="hotdog1" class="card__face card__face--front hotdog"></div>
+          <div class="card__face card__face--back">
+            <img
+              src="./img/hotdog-removebg-preview.png"
+              alt="Avatar"
+              style="width: 100%; margin-top: 70%"
+            />
+          </div>
+          <div style="display: none">hotdog</div>
+        </div>
+      </div>
+      <div id="secondRow" class="rows">
+        <div id="card7" class="cards">
+          <div id="hotdog2" class="card__face card__face--front hotdog"></div>
+          <div class="card__face card__face--back">
+            <img
+              src="./img/hotdog-removebg-preview.png"
+              alt="Avatar"
+              style="width: 100%; margin-top: 70%"
+            />
+          </div>
+          <div style="display: none">hotdog</div>
+        </div>
+        <div id="card8" class="cards">
+          <div id="taco1" class="card__face card__face--front taco"></div>
+          <div class="card__face card__face--back">
+            <img
+              src="./img/taco-removebg-preview.png"
+              alt="Avatar"
+              style="width: 100%; margin-top: 50%"
+            />
+          </div>
+          <div style="display: none">taco</div>
+        </div>
+        <div id="card9" class="cards">
+          <div id="noodle2" class="card__face card__face--front noodle"></div>
+          <div class="card__face card__face--back">
+            <img
+              src="./img/noodle-removebg-preview.png"
+              alt="Avatar"
+              style="width: 100%; margin-top: 40%"
+            />
+          </div>
+          <div style="display: none">noodle</div>
+        </div>
+        <div id="card10" class="cards">
+          <div id="taco2" class="card__face card__face--front taco"></div>
+          <div class="card__face card__face--back">
+            <img
+              src="./img/taco-removebg-preview.png"
+              alt="Avatar"
+              style="width: 100%; margin-top: 50%"
+            />
+          </div>
+          <div style="display: none">taco</div>
+        </div>
+        <div id="card11" class="cards">
+          <div id="donut2" class="card__face card__face--front donut"></div>
+          <div class="card__face card__face--back">
+            <img
+              src="./img/donut-removebg-preview.png"
+              alt="Avatar"
+              style="width: 100%; margin-top: 50%"
+            />
+          </div>
+          <div style="display: none">donut</div>
+        </div>
+        <div id="card12" class="cards">
+          <div id="pizza2" class="card__face card__face--front pizza"></div>
+          <div class="card__face card__face--back">
+            <img
+              src="./img/pizza-removebg-preview.png"
+              alt="Avatar"
+              style="width: 100%; margin-top: 50%"
+            />
+          </div>
+          <div style="display: none">pizza</div>
+        </div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
